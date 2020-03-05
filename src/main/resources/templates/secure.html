@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet">
+</head>
+<body>
+
+<h3>Secure Page</h3>
+<a href="/logout">logout</a>
+
+
+<p th:inline="text"><strong>First name: </strong>[[${user.firstName}]]</p>
+<p th:inline="text"><strong>Last name: </strong>[[${user.lastName}]]</p>
+<p th:inline="text"><strong>Email: </strong>[[${user.email}]]</p>
+<p th:inline="text"><strong>Username: </strong>[[${user.username}]]</p>
+
+
+
+</div>
+</body>
+</html>
