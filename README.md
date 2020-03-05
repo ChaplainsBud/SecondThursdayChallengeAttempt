@@ -15,6 +15,8 @@ return "index";
 Security Template:
 
 i. After registering, there is no record of user. 
+ii. I register, and then go to the login page.
+iii. The login page says invalid user.
 
 
  
