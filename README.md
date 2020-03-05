@@ -1,13 +1,39 @@
-If this template works, I will be able to add it to various projects.
+1. The home page shall display a list of all messages
 
-I. Include template before anything else. Security is ALWAYS first.
+//
 
-II. Modify login to the site's particular theme/appearance.
+2. Make the users login for any page they access (easier for you all)
 
-III. Then add the Backend/Frontend code. 
+//
+ 
+3. Users shall sign up using a registration page
 
-3/4/2020
+//
 
-9:50 a.m. / Fix Template Bugs
+4. Users shall be logged in to create a post or edit a post
 
-1:23 p.m. / Registration Data is inputted, but there is no record displayed
+//
+
+5. Every page (or template) should have a link (or button) to add a new message. This link shall be visible only when the user is logged in. (check on security thymeleaf extras)
+
+//
+
+6. There shall be a link to Logout which, when clicked, logs out the user and redirects them to the login page. This link shall only be visible when the user is logged in.
+
+//
+
+7. Implement Bootstrap to make the site look good
+
+//
+
+8. Use a  database to store your messages 
+
+//
+
+9. Pre-loading data is recommended but not required. You probably want to modify the data loader to execute only once.
+
+//
+
+10. Display the logged in username on every page (or in the navigation menu) where they are logged in.
+
+//
