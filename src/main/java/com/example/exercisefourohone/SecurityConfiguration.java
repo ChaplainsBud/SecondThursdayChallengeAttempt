@@ -40,6 +40,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                     .authorizeRequests()
                     .antMatchers("/", "/h2-console/**", "/register").permitAll() // INCLUDE CSS FILES HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                    // temporary .antmaters = just to get site running --> after below, still no form
+                    .antMatchers("/mesageform").permitAll()
+                    // css is blocked, how about: below was necessary
+                    .antMatchers("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css").permitAll()
+                    .antMatchers("/list").permitAll()
+
                     .antMatchers("/admin")
                     .access("hasAuthority('ADMIN')")
                     .anyRequest().authenticated()

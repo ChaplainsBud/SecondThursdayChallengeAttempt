@@ -98,7 +98,8 @@ public class HomeController {
             e.printStackTrace();
             return "redirect:/add";
         }
-        return "redirect:/" ;}
+        // changed from local host to 'list'
+        return "redirect:/secure" ;}
 
     @PostMapping("/process")
     public String processForm(@Valid Message message,
@@ -107,6 +108,7 @@ public class HomeController {
             return "messageform";
         }
         messageRepository.save(message);
+        // changed from local host to 'list'
         return "redirect:/";
     }
 
