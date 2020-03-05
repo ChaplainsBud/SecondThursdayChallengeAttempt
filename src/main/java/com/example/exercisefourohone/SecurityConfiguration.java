@@ -47,7 +47,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .antMatchers("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css").permitAll()
                     .antMatchers("/list", "/update").permitAll()
 
-                    .antMatchers("/admin")
+                    // show file blocked
+                    .antMatchers("/show", "/detail", "/detail/{id}").permitAll()
+                // below from StackOverflow
+                    .antMatchers("/detail/{id}/**").access("authorise(#id)")
+
+                  // I have to free up Bootstrap's three files
+                    .antMatchers("https://code.jquery.com/jquery-3.4.1.slim.min.js").permitAll()
+                    .antMatchers("https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js").permitAll()
+                    .antMatchers("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js").permitAll()
+
+                .antMatchers("/admin")
                     .access("hasAuthority('ADMIN')")
                     .anyRequest().authenticated()
                     .and().formLogin().loginPage("/login").permitAll()
