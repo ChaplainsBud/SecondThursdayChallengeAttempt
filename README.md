@@ -2,9 +2,21 @@
 
 //
 
+@RequestMapping()
+private String index(Model model){
+model.addAttribute("users", userRepository.findAll());
+return "index";
+}
+
 2. Make the users login for any page they access (easier for you all)
 
 //
+
+Security Template:
+
+i. After registering, there is no record of user. 
+
+
  
 3. Users shall sign up using a registration page
 
