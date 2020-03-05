@@ -7,7 +7,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -39,7 +38,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         http
                     .authorizeRequests()
-                    .antMatchers("/", "/h2-console/**", "/register").permitAll() // INCLUDE CSS FILES HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    .antMatchers("/", "/h2-console/**", "/register", "/css/**").permitAll() // INCLUDE CSS FILES HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
                     // temporary .antmaters = just to get site running --> after below, still no form
                     .antMatchers("/mesageform").permitAll()
@@ -56,6 +55,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .antMatchers("https://code.jquery.com/jquery-3.4.1.slim.min.js").permitAll()
                     .antMatchers("https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js").permitAll()
                     .antMatchers("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js").permitAll()
+
+
 
                 .antMatchers("/admin")
                     .access("hasAuthority('ADMIN')")

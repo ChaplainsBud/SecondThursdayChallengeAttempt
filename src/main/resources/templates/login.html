@@ -8,7 +8,26 @@
     <script src="https://kit.fontawesome.com/9c2c348e64.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"> <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <h1>My Login Form: </h1>
 <div th:if="${param.error}">
     Invalid username or password
@@ -24,7 +43,7 @@
     <div><input type="submit" value="Sign in"/></div>
 </form>
 <h6>Register if you have no login: </h6>
-<a href="/register">Register</a>
+<a class="btn btn-info btn-lg " href="/register">Register</a>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -36,5 +55,16 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+<style>
+    body {
+        background-image:url("https://res.cloudinary.com/a-name-not-already-taken/image/upload/v1583438240/kevin-mueller-aeNg4YA41P8-unsplash_rafbx8.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    h1, label {
+        color: white;
+    }
+</style>
 </body>
 </html>

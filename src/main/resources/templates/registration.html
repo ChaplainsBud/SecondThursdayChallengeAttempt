@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#"></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <h4>New User Registration</h4>
 <form action="#" autocomplete="off" th:action="@{/register}" th:object="${user}" method="post">
     
@@ -45,5 +66,25 @@
 
     <button type="submit" class="btn btn-default">Submit</button>
 </form>
+<style>
+    * {
+        color: white;
+    }
+    input {
+        color: black;
+    }
+
+    body {
+        background-image:url("https://res.cloudinary.com/a-name-not-already-taken/image/upload/v1583438240/kevin-mueller-aeNg4YA41P8-unsplash_rafbx8.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    button {
+        color: lightseagreen;
+    }
+
+
+</style>
 </body>
 </html>
